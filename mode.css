@@ -1,0 +1,239 @@
+ /* ///////////////////////Dark Mode /////////////////////////// */
+ /* ===== Dark Mode Base Styles ===== */
+ 
+ #mode--btn {
+     display: none;
+ }
+ 
+ .light--mode {
+     display: none;
+     color: #fff;
+     cursor: pointer;
+ }
+ 
+ .dark--mode {
+     cursor: pointer;
+     font-size: 1.5rem;
+ }
+ 
+ body:has(#mode--btn:checked) .dark--mode {
+     display: none;
+ }
+ 
+ body:has(#mode--btn:checked) .light--mode {
+     display: inline-block;
+ }
+ 
+ :root:has(#mode--btn:checked) {
+     --light-bg-white: #202020;
+     --light-bg-grey: #252525;
+     --light-highlight: #c17e1f;
+     --light-main-color: #fff;
+     --light-sec-color: rgb(159, 159, 159);
+     --dark-bg-dark: #000000;
+     --color-default: var(--light-main-color);
+     --color-secondary: hsl(240, 7%, 23%);
+     --background-two: url("images/team-shape - Copy.svg");
+ }
+ 
+ body:has(#mode--btn:checked) .navbar {
+     background-color: var(--dark-bg-dark);
+ }
+ /* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* important ==> here we should calcualte the specificity of .navbar na ul li a (1,2,5) and the below body:has(#mode--btn:checked (1,5,5)   */
+ 
+ body:has(#mode--btn:checked) .navbar nav ul li a {
+     color: var(--light-sec-color);
+ }
+ /* ===== Dark Mode Active Links ===== */
+ 
+ body:has(#mode--btn:checked):not(body:has(:target)) .navbar nav ul li a[href="#home"],
+ body:has(#mode--btn:checked):has(.home:target) .navbar nav ul li a[href="#home"],
+ body:has(#mode--btn:checked):has(.contact:target) .navbar nav ul li a[href="#contact"],
+ body:has(#mode--btn:checked):has(.gallery:target) .navbar nav ul li a[href="#gallery"],
+ body:has(#mode--btn:checked):has(.chefs:target) .navbar nav ul li a[href="#chefs"] {
+     color: var(--light-main-color);
+ }
+ /* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+ 
+ body:has(#mode--btn:checked) .navbar nav .exit-icon i {
+     color: var(--light-highlight);
+ }
+ 
+ body:has(#mode--btn:checked) .navbar .logo a {
+     color: var(--light-main-color);
+ }
+ 
+ body:has(#mode--btn:checked) .navbar nav ul li a:hover {
+     color: var(--light-main-color);
+ }
+ 
+ body:has(#mode--btn:checked) .navbar nav ul li a::after {
+     background-color: var(--light-highlight);
+ }
+ 
+ body:has(#mode--btn:checked) .navbar nav ul li a:active::after {
+     width: calc(100% - 20px);
+     background-color: var(--light-highlight);
+ }
+ 
+ body:has(#mode--btn:checked) .navbar .logo .higlight-yellow {
+     color: var(--light-highlight);
+ }
+ /* ///////////////////////////////////end of navbar///////////////////////////////////////////////// */
+ 
+ body:has(#mode--btn:checked) #chefs,
+ body:has(#mode--btn:checked) #contact {
+     background-color: var(--light-bg-white);
+     color: #fff;
+ }
+ 
+ body:has(#mode--btn:checked) .chefs .chef {
+     background-color: var(--light-bg-grey)
+ }
+ 
+ body:has(#mode--btn:checked) .home-main,
+ body:has(#mode--btn:checked) #gallery {
+     background-color: var(--light-bg-grey);
+ }
+ 
+ body:has(#mode--btn:checked) .home-main .home-content .container .text h2 {
+     color: var(--light-main-color);
+ }
+ 
+ body:has(#mode--btn:checked) .home-main .home-content .container .text p {
+     color: var(--light-sec-color);
+ }
+ 
+ body:has(#mode--btn:checked) .home-main .home-content .container .text .book {
+     background-color: var(--light-highlight);
+     color: var(--dark-bg-dark);
+ }
+ 
+ body:has(#mode--btn:checked) .home-main .home-content .container .text .watch {
+     color: var(--light-main-color);
+ }
+ 
+ body:has(#mode--btn:checked) .home-main .home-content .container .text .watch div {
+     display: flex;
+     position: relative;
+     justify-content: center;
+     align-items: center;
+     width: 3.125rem;
+     height: 3.125rem;
+     background: linear-gradient(to right, var(--light-highlight) 0 50%, transparent 50% 100%);
+     border-radius: 50%;
+     margin-right: .625rem;
+ }
+ 
+ body:has(#mode--btn:checked) .home-main .home-content .container .text .watch div::after {
+     content: "";
+     position: absolute;
+     border-radius: 50%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     height: 70%;
+     width: 70%;
+     /* Only change this line - replace the background-color */
+     background-color: color-mix(in hsl, var(--dark-bg-dark), hsl(0 0% 50%) 20%);
+ }
+ 
+ body:has(#mode--btn:checked) .home-main .home-content .container .text .watch div i {
+     z-index: 7;
+ }
+ 
+ body:has(#mode--btn:checked) .home-main .home-content .container .text .watch:hover {
+     color: var(--light-highlight);
+ }
+ /* ///////////////////////////////chef//////////////////////////// */
+ 
+ body:has(#mode--btn:checked) .chefs p .higlight-yellow {
+     color: var(--light-highlight);
+ }
+ 
+ body:has(#mode--btn:checked) #chefs .chefs p,
+ body:has(#mode--btn:checked).contact--container {
+     color: #fff !important;
+ }
+ 
+ body:has(#mode--btn:checked) .chefs .container .chef .img::after {
+     content: "";
+     position: absolute;
+     bottom: -1px;
+     left: 0;
+     background-image: var(--background-two);
+     width: 100%;
+     height: 55px;
+ }
+ 
+ body:has(#mode--btn:checked) .chefs .container .chef p {
+     color: var(--color-tertiary);
+ }
+ /* ///////////////////////////////Gallery//////////////////////////// */
+ 
+ body:has(#mode--btn:checked) .gallery p .higlight-yellow {
+     color: var(--light-highlight);
+ }
+ /* ///////////////////////////////Contact//////////////////////////// */
+ 
+ body:has(#mode--btn:checked) .contact p .higlight-yellow {
+     color: var(--light-highlight);
+ }
+ 
+ body:has(#mode--btn:checked) .contact .container .contacts .contact-item .img i {
+     background-color: var(--light-highlight);
+     color: var(--dark-bg-dark);
+ }
+ 
+ body:has(#mode--btn:checked) .contact .container .contacts .contact-item {
+     background-color: var(--dark-bg-dark);
+ }
+ 
+ body:has(#mode--btn:checked) .contact form {
+     background-color: var(--dark-bg-dark);
+ }
+ 
+ body:has(#mode--btn:checked) .contact form input:focus,
+ body:has(#mode--btn:checked) .contact form textarea:focus {
+     border-color: var(--light-highlight);
+ }
+ 
+ body:has(#mode--btn:checked) .contact form button {
+     background-color: var(--light-highlight);
+     color: var(--dark-bg-dark);
+ }
+ 
+ body:has(#mode--btn:checked) .contact form button:hover {
+     background-color: var(--light-highlight);
+     color: var(--dark-bg-dark);
+     cursor: pointer;
+ }
+ /* ///////////////////////////////Footer//////////////////////////// */
+ 
+ body:has(#mode--btn:checked) #footer .container a .higlight-yellow {
+     color: var(--light-highlight);
+ }
+ 
+ body:has(#mode--btn:checked) #footer {
+     color: #fff;
+ }
+ 
+ body:has(#mode--btn:checked) #footer .container .item2 form button {
+     background-color: var(--light-highlight);
+     color: var(--dark-bg-dark);
+ }
+ 
+ body:has(#mode--btn:checked) #footer .container .item3 i {
+     color: var(--light-highlight);
+ }
+ 
+ body.dark-mode::-webkit-scrollbar {
+     background-color: #171717;
+     border-left: 2px solid #252525;
+ }
+ 
+ body.dark-mode::-webkit-scrollbar-thumb {
+     background-color: #fff;
+     box-shadow: 0px 0px 10px 0px #333 inset;
+ }

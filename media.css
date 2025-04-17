@@ -1,0 +1,146 @@
+/* Media queries */
+
+@media screen and (min-width:87.5625rem) {
+    .container {
+        width: 70%;
+    }
+    .gallery .container {
+        height: 80rem;
+    }
+}
+
+@media screen and (min-width:75.0625rem) and (max-width:87.5rem) {
+    .gallery .container {
+        height: 1000px;
+    }
+}
+
+@media screen and (max-width:75rem) {
+    .gallery .container {
+        height: 53.125rem;
+    }
+}
+
+@media screen and (max-width:62rem) {
+    .navbar .logo {
+        margin-right: auto;
+    }
+    .navbar nav {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100vh;
+        width: 50%;
+        background-color: var(--color-light);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        transition: all .5s;
+        gap: 30px;
+    }
+    .navbar nav ul {
+        flex-direction: column;
+    }
+    .navbar nav ul li {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .navbar nav .exit-icon {
+        display: block;
+        margin-left: auto;
+    }
+    .navbar .menu-icon {
+        display: block;
+        margin-left: 20px;
+    }
+    .navbar .menu-icon i {
+        font-size: 20px;
+        color: var(--color-default);
+    }
+    .home-content .home-content {
+        padding: 100px 0 50px 0;
+        text-align: center;
+    }
+    #home-main .home-content .container {
+        flex-direction: column-reverse;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-content .home-content .container .text,
+    .home-content .home-content .container .img {
+        width: 100%;
+    }
+    .home-content .home-content .container .text .button-links {
+        justify-content: center;
+    }
+    .home-content .home-content .container .text .book {
+        border-radius: 30px;
+    }
+    .chefs .chef {
+        width: calc((100% - 30px) / 2);
+    }
+    .gallery .container {
+        height: 1550px;
+    }
+    .gallery .container .img {
+        width: calc((100% - 20px) / 2);
+    }
+    .contact form input:nth-child(1),
+    .contact form input:nth-child(2) {
+        width: 100%;
+    }
+    body:has(.menu:target) .navbar nav {
+        left: 50%;
+    }
+    body:has(.home:target) .navbar nav {
+        left: 100%;
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .container {
+        width: 70%;
+    }
+    .chefs .chef {
+        width: 100%;
+    }
+    .gallery .container {
+        height: auto;
+    }
+    .gallery .container .img {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .contact .container .contacts .contact-item {
+        width: 100%
+    }
+    #footer .container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 36rem) {
+    .container {
+        width: 90%;
+    }
+    .home-content .home-content .container .text .button-links {
+        flex-direction: column;
+    }
+    .home-content .home-content .container .text .book {
+        margin-right: 0;
+        margin-bottom: .9375rem;
+    }
+    #footer .container .item2 form {
+        flex-direction: column;
+    }
+    #footer .container .item2 form input {
+        flex: 1;
+    }
+    #footer .container .item2 form button {
+        flex: 1;
+        padding: .75rem;
+    }
+}
