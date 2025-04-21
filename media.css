@@ -21,7 +21,7 @@
     }
 }
 
-@media screen and (max-width:62rem) {
+@media screen and (max-width:992px) {
     .navbar .logo {
         margin-right: auto;
     }
@@ -59,7 +59,7 @@
         font-size: 20px;
         color: var(--color-default);
     }
-    .home-content .home-content {
+    /* .home-content .home-content {
         padding: 100px 0 50px 0;
         text-align: center;
     }
@@ -78,7 +78,7 @@
     }
     .home-content .home-content .container .text .book {
         border-radius: 30px;
-    }
+    } */
     .chefs .chef {
         width: calc((100% - 30px) / 2);
     }
@@ -100,9 +100,58 @@
     }
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
     .container {
-        width: 70%;
+        width: 80%;
+    }
+    #home-main .home-content .container {
+        flex-direction: column;
+        margin-top: 62px;
+    }
+    /* Image container - comes FIRST */
+    .home-main .home-content .container .img {
+        width: 100%;
+        order: 1;
+        /* Explicitly place image first */
+    }
+    /* Actual image styling */
+    .home-main .home-content .container .img img {
+        width: 100%;
+        height: 25%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+    }
+    /* Text container - comes AFTER image */
+    .home-main .home-content .container .text {
+        width: 100%;
+        order: 2;
+        text-align: center;
+        padding: 24px 16px;
+        /* Added substantial padding */
+        box-sizing: border-box;
+        /* Ensures padding is included in width */
+    }
+    /* Heading adjustments */
+    .home-main .home-content .container .text h2 {
+        font-size: 62px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+        /* Reduced from 16px */
+    }
+    /* Button row layout */
+    .home-main .home-content .container .text .button-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 26px;
+        margin-top: 16px;
+        /* Reduced from 24px */
+    }
+    /* Button spacing fix */
+    .home-main .home-content .container .text .book {
+        margin-right: 0;
+        margin-bottom: 0;
     }
     .chefs .chef {
         width: 100%;
@@ -122,17 +171,66 @@
     }
 }
 
-@media screen and (max-width: 36rem) {
+@media screen and (max-width: 576px) {
     .container {
         width: 90%;
     }
-    .home-content .home-content .container .text .button-links {
+    #home-main .home-content .container {
         flex-direction: column;
+        margin-top: 62px;
     }
-    .home-content .home-content .container .text .book {
+    /* Image container - comes FIRST */
+    .home-main .home-content .container .img {
+        width: 100%;
+        order: 1;
+        /* Explicitly place image first */
+    }
+    /* Actual image styling */
+    .home-main .home-content .container .img img {
+        width: 100%;
+        height: 25%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+    }
+    /* Text container - comes AFTER image */
+    .home-main .home-content .container .text {
+        width: 100%;
+        order: 2;
+        text-align: center;
+        padding: 24px 16px;
+        /* Added substantial padding */
+        box-sizing: border-box;
+        /* Ensures padding is included in width */
+    }
+    /* Heading adjustments */
+    .home-main .home-content .container .text h2 {
+        font-size: 62px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+        /* Reduced from 16px */
+    }
+    /* Button row layout */
+    .home-main .home-content .container .text .button-links {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.125rem;
+        margin-top: 16px;
+        /* Reduced from 24px */
+    }
+    /* Button spacing fix */
+    .home-main .home-content .container .text .book {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    /* .home-content .home-content .container .text .button-links {
+        flex-direction: column;
+    } */
+    /* .home-content .home-content .container .text .book {
         margin-right: 0;
         margin-bottom: .9375rem;
-    }
+    } */
     #footer .container .item2 form {
         flex-direction: column;
     }

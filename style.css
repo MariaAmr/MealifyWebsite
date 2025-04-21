@@ -40,7 +40,7 @@
         --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         --font-primary: "Amatic SC", sans-serif;
         --font-secondary: "Inter", sans-serif;
-        --background: url("../images/team-shape.svg");
+        --background: url("images/team-shape.svg");
     }
     
     body:not(body:has(:target)) li a[href="#home"],
@@ -620,8 +620,11 @@
     }
     
     #footer {
-        background-image: linear-gradient(#0009, #0009), url("images/textured-metal-background.jpg");
-        background-size: contain;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/textured-metal-background.jpg");
+        background-size: cover;
+        /* Changed from contain to cover */
+        background-position: center;
+        background-repeat: no-repeat;
         color: #fff;
     }
     
